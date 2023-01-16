@@ -15,5 +15,8 @@ def find_all_users_name(data: dict)->list:
         if 'actor' in i:
             if i['actor'] not in names:
                 names.append(i['actor'])
+        if 'from' in i:
+            if i['from'] not in names:
+                names.append(i['from'])
     return names
 print(find_all_users_name(read_data('data/result.json')))
