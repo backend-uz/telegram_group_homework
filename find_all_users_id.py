@@ -14,5 +14,6 @@ def find_all_users_id(data: dict)->list:
     for i in data:
         if 'actor_id' in i:
             users.append(i['actor_id'])
+            users.append(i['from_id'])
     return users
 print(find_all_users_id(read_data('data/result.json')))
