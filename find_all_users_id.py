@@ -13,8 +13,9 @@ def find_all_users_id(data: dict)->list:
     data = data['messages']
     for i in data:
         if 'actor_id' in i:
-            if i['actor_id'] not in users:
-                users.append(i['actor_id'])
+            if i['actor_id'] not in 'channel1640165484':
+                if i['actor_id'] not in users:
+                    users.append(i['actor_id'])
         # if 'from_id' in i:
         #     if i['from_id'] not in users:
         #         users.append(i['from_id'])
