@@ -18,5 +18,5 @@ def find_all_users_id(data: dict)->list:
         if 'from_id' in i:
             if i['from_id'] not in users:
                 users.append(i['from_id'])
-    return 
+    return users
 print(find_all_users_id(read_data('data/result.json')))
