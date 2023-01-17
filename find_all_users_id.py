@@ -16,9 +16,9 @@ def find_all_users_id(data: dict)->list:
             if i['actor_id'] and i['actor_id'].startswith('user'):
                 if i['actor_id'] not in users:
                     users.append(i['actor_id'])
-        else:
-            if i['from_id'] and i['from_id'].startswith('user'):
-                if i['from_id'] not in users:
-                    users.append(i['from_id'])
+        # else:
+        if i['from_id'] and i['from_id'].startswith('user'):
+            if i['from_id'] not in users:
+                users.append(i['from_id'])
     return users
 # print(find_all_users_id(read_data('data/result.json')))
