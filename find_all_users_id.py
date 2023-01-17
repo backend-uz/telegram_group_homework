@@ -12,11 +12,11 @@ def find_all_users_id(data: dict)->list:
     users = []
     data = data['messages']
     for i in data:
-        if 'actor_id' in i:
+        if i['type'] == 'service':
             if i['actor_id'] and i['actor_id'].startswith('user'):
                 if i['actor_id'] not in users:
                     users.append(i['actor_id'])
-        if 'from_id' in i:
+        if i['type'] == 'message':
             if i['from_id'] and i['from_id'].startswith('user'):
                 if i['from_id'] not in users:
                     users.append(i['from_id'])
