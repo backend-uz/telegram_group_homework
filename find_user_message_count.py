@@ -17,7 +17,7 @@ def find_user_message_count(data: dict, users_id: str)->dict:
 
     for msg in data['messages']:
         if msg['type'] == 'message':
-            if msg['from_id'].startswith('user'):
+            if msg['from_id']:#.startswith('user'):
                 message[msg['from_id']] += 1
     return message
 
